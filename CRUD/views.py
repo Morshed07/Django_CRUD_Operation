@@ -14,5 +14,5 @@ def Index(request):
             fm = StudentRegistration()
     else:
         fm = StudentRegistration()
-        stud = User.object.all()
-    return render(request,'addandshow.html',{'form': fm}, {'stu': stud})
+        stud = User.objects.all()
+    return render(request,'addandshow.html',{'form': fm, 'stu': stud})
